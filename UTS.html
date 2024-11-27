@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="UTS1.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="icon" type="image/x-icon" href="/tugas/image/logofm.jpg">
+	<title>UTS</title>
+
+</head>
+<nav>
+ <label class="logo">Fresh Market</label>
+	<ul>
+		<li><a class= "active" href="#">Home</a></li>
+		<li><a href="http://localhost/tugas/maincours.html">Main Cours</a></li>
+		<li><a href="http://localhost/tugas/dessert.html">Dessert</a></li>
+		<li><a href="http://localhost/tugas/beverage.html">Beverage</a></li>
+	</ul>
+</nav>
+<body>
+
+
+<!--SLIDE CONTAINER-->
+    <section>
+        <div class="slide-wrapper"><center>
+            <div class="slider" style="width: 1150px; height: 600px;">
+            	<img id="slide-1" src="/tugas/image/fm.webp" alt="3D rendering of an imaginary orange planet in space"/>
+                <img id="slide-2" src="/tugas/image/freshmarket.jpg" alt="3D rendering of an imaginary orange planet in space"/>
+                <img id="slide-3" src="/tugas/image/kios.jpeg" alt="3D rendering of an imaginary orange planet in space"/>
+                <img id="slide-4" src="/tugas/image/parkiran.jpg" alt="3D rendering of an imaginary orange planet in space"/>  
+            </div>
+            <div class="slide-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+                <a href="#slide-4"></a>
+            </div>
+        </div></center>
+    </section> <br>
+<!--SLIDE CONTAINER END-->
+<br>
+<p class="intro"> 
+Fresh Market Bintaro telah menjadi destinasi kuliner yang menarik bagi masyarakat sekitar Tangerang Selatan dan Jakarta Selatan, menawarkan beragam pilihan makanan dari berbagai kultur dan cita rasa. Pasar modern ini menghadirkan konsep food court yang bersih, nyaman, dan tertata rapi dengan puluhan tenant makanan yang menyajikan hidangan lokal hingga internasional. Pengunjung dapat menikmati berbagai pilihan menu mulai dari masakan tradisional Indonesia seperti soto, sate, dan gado-gado, hingga kuliner Asia seperti dimsum, ramen, dan korean food. Kualitas makanan yang disajikan terjaga dengan baik karena setiap tenant harus memenuhi standar kebersihan dan keamanan pangan yang ditetapkan oleh manajemen.
+<br>
+<br>
+Keunikan Fresh Market Bintaro terletak pada kombinasi antara pasar segar dan area kuliner yang menyatu dalam satu lokasi. Pengunjung dapat berbelanja bahan makanan segar seperti sayuran, buah-buahan, daging, dan seafood, kemudian menikmati hidangan siap saji di area makan yang nyaman. Harga makanan yang ditawarkan cukup bervariasi, mulai dari yang terjangkau hingga premium, menjadikannya tempat makan yang inklusif untuk berbagai kalangan. Suasana yang semi outdoor dengan sirkulasi udara yang baik, ditambah dengan area parkir yang luas, membuat Fresh Market Bintaro menjadi pilihan ideal untuk bersantap bersama keluarga atau teman-teman, terutama di akhir pekan.</p>
+<br>
+
+<h1>Our Location</h1>
+<center>
+<div>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.911636257939!2d106.6974176749909!3d-6.275348293713433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fbfa4e4b81fd%3A0x767ba9acbc4a8453!2sFresh%20Market%20Emerald%20Bintaro!5e0!3m2!1sid!2sid!4v1731656434434!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+<div class="box">
+        <div id="jamDigital"></div>
+    </div>
+</center>
+<script>
+	function tampilkanJam() {
+            let waktu = new Date();
+            let jam = waktu.getHours();
+            let menit = waktu.getMinutes();
+            let detik = waktu.getSeconds();
+
+            jam = jam < 10 ? "0" + jam : jam;
+            menit = menit < 10 ? "0" + menit : menit;
+            detik = detik < 10 ? "0" + detik : detik;
+
+            let waktuString = jam + ":" + menit + ":" + detik;
+            document.getElementById("jamDigital").innerHTML = waktuString;
+            setTimeout(tampilkanJam, 1000);
+        }
+        tampilkanJam();
+</script>
+<br>
+<hr>
+
+ <form id="myForm" onsubmit="return validateForm(event)">
+ 	<h1>Review Pengguna</h1>
+        <div class="form-group">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama">
+            <div id="namaError" class="error">Nama harus diisi</div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <div id="emailError" class="error">Email tidak valid</div>
+        </div>
+
+        <div class="form-group">
+            <label for="telepon">Nomor Telepon:</label>
+            <input type="tel" id="telepon" name="telepon">
+            <div id="teleponError" class="error">Nomor telepon harus diisi</div>
+        </div>
+
+        <div class="form-group">
+            <label for="review">Review:</label>
+            <input type="text" id="review" name="telepon">
+            <div id="reviewError" class="error">Review harus diisi</div>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Jenis Kelamin:</label>
+            <select id="gender" name="gender">
+                <option value="">Pilih jenis kelamin</option>
+                <option value="L">Laki-laki</option>
+                <option value="P">Perempuan</option>
+            </select>
+            <div id="genderError" class="error">Pilih jenis kelamin</div>
+        </div>
+
+        <button type="submit">Kirim</button>
+    </form>
+<script>
+        function validateForm(event) {
+            event.preventDefault();
+            
+            // Reset semua error
+            document.querySelectorAll('.error').forEach(error => {
+                error.style.display = 'none';
+            });
+
+            let isValid = true;
+            
+            // Validasi nama
+            const nama = document.getElementById('nama').value;
+            if (!nama) {
+                document.getElementById('namaError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Validasi email
+            const email = document.getElementById('email').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailRegex.test(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Validasi telepon
+            const telepon = document.getElementById('telepon').value;
+            if (!telepon) {
+                document.getElementById('teleponError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Validasi review
+            const review = document.getElementById('review').value;
+            if (!telepon) {
+                document.getElementById('reviewError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Validasi gender
+            const gender = document.getElementById('gender').value;
+            if (!gender) {
+                document.getElementById('genderError').style.display = 'block';
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert('Form berhasil dikirim!');
+                document.getElementById('myForm').reset();
+            }
+
+            return false;
+        }
+</script>
+<footer>
+<div class="footerContainer">
+	<div class="socialIcons">
+		<a href=""><i class="fa-brands fa-facebook"></i></a> 
+		<a href=""><i class="fa-brands fa-instagram"></i></a> 
+		<a href=""><i class="fa-brands fa-twitter"></i></a> 
+		<a href=""><i class="fa-brands fa-youtube"></i></a> 
+	</div>
+	<div class="footerNav">
+		<ul>
+			<li><a href="">Home</li></a>
+			<li><a href="">About</li></a>
+			<li><a href="">Contact Us</li></a>
+			<li><a href="">Our Team</li></a>
+		</ul>
+	</div>
+	<div class="footerBottom">
+	<p>&copy;2024 Designed by <span class="designer">Zahira Ramadhania | 5A | 11220251000146</span></p> 
+	</div>
+</div>
+</footer>
+
+</body>
+</html>

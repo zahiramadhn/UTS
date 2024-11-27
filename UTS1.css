@@ -1,0 +1,260 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+	font-family: cambria;
+}
+
+body{
+	background-color: #f4f0ec;
+}
+/*navbar*/
+nav{
+	background: #6b4423;
+	height: 80px;
+	width: 100%;
+}
+
+label.logo{
+	color: #f4f0ec;
+	font-size: 40px;
+	line-height: 80px;
+	padding: 0 100px;
+	font-weight: bold;
+}
+
+nav ul{
+	float: right;
+	margin-right: 20px;
+}
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+
+nav ul li a{
+	color:  #f4f0ec;
+	font-size: 23px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: helvetica;
+}
+
+a:hover{
+	background: #c19a6b;
+	transition:2s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+ #check{
+    display: none;
+}
+
+@media (max-width: 858px){
+   .checkbtn{
+        display: block;
+    	}
+    
+	ul{
+    	position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #0C1A1A;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0,5s;
+        }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        }
+    nav ul li a{
+        font-size: 20px;
+        }
+    a:hover, a.active{
+        background: none;
+        color: #3A0304;
+        }
+        #check:checked ~ ul{
+        left: 0;
+        }
+    }
+/*navbar end */
+
+/* slider */
+.slider-wrapper {
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+.slider {
+	display: flex;
+	padding: 0%;
+	aspect-ratio: 16 / 9;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	margin-bottom: 0px;
+	width: 100%;
+}
+
+.slider img{
+	flex: 1 1 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+	padding: 10px;
+
+}
+.slider-nav {
+	display: flex;
+	column-gap: 0.5rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+
+}
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: #ffffff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+.slider-nav a:hover {
+	opacity: 1;
+}
+/* slider end */
+.intro {
+	font-size: 25px;
+	justify-content: center;
+	color:#6b4423 ;
+	text-align: center;
+}
+
+h1 {
+    color: #6b4423;
+    font-size: 60px;
+    text-align: center;
+}
+.box {
+	font-size: 30px;
+	color:#6b4423 ;
+}
+/*form*/
+form{
+	font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+}
+label{
+	font-size: 20px;
+	color: #6b4423 ;
+}
+.form-group {
+            margin-bottom: 15px;
+        }
+input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        option{
+        	color:#6b4423 ;
+        }
+
+
+/* footer */
+footer {
+	background-color: #6b4423;
+}
+.footerContainer{
+	width: 100%;
+	padding: 70px 30px 20px;
+}
+
+.socialIcons{
+	display: flex;
+	justify-content: center;
+}
+.socialIcons a{
+	text-decoration: none;
+	padding: 10px;
+	background-color: #f4f0ec;
+	margin: 10px;
+	border-radius: 50%;
+}
+.socialIcons a:hover{
+	background-color: #c19a6b;
+	transition: 0.5s;
+}
+.socialIcons a:hover i{
+	color: white;
+	transition: 0.5s;
+
+}
+.socialIcons a i{
+	font-size: 2em;
+	color: black;
+	opacity: 0.9;
+}
+.footerNav{
+	margin: 30px 0;
+}
+.footerNav ul{
+	display: flex;
+	justify-content: center;
+}
+.footerNav ul li a{
+	color: white;
+	margin: 20px;
+	text-decoration: none;
+	font-size: 1.3em;
+	opacity:0.7 ;
+	transition: 0.5s;
+}
+.footerNav ul li a:hover{
+	opacity: 1;
+}
+.footerBottom{
+	justify-content: center;
+	color: #f4f0ec;
+}
